@@ -1,12 +1,12 @@
 module.exports = {
     // This is your MYSQL Database configuration
     db: {
-        name: "mean_relational",
-        password: "",
+        name: "db_marketPlace",
+        password: "nerv2309",
         username: "root"
     },
     app: {
-        name: "M*EAN Stack - Development"
+        name: "Market Place"
     },
     // You will need to get your own client id's before this will work properly
     facebook: {
