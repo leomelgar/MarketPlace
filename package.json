@@ -1,12 +1,12 @@
 {
-  "name": "mean-stack-relational",
-  "description": "M*EAN - A Modern Stack: MySQL, ExpressJS, AngularJS, NodeJS. (BONUS: Passport User Support).",
+  "name": "MarketPlace",
+  "description": "un sitio de compras de insumos informaticos",
   "version": "0.1.0",
   "private": false,
-  "author": "Jeff Potter",
+  "author": "Leonardo Melgar",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpotts18/mean-stack-relational.git"
+    "url": "https://github.com/leomelgar/MarketPlace.git"
   },
   "engines": {
     "node": "0.10.x",
