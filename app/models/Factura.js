@@ -1,7 +1,7 @@
 
 /**
-	* Factura Model
-	*/
+* Factura Model
+*/
 
 module.exports = function(sequelize, DataTypes) {
 
