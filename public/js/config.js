@@ -2,6 +2,7 @@
 angular.module('mean').config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+        //to articles
         when('/articles', {
             templateUrl: 'views/articles/list.html'
         }).
@@ -13,6 +14,19 @@ angular.module('mean').config(['$routeProvider',
         }).
         when('/articles/:articleId', {
             templateUrl: 'views/articles/view.html'
+        }).
+        //to clients
+        when('/clients', {
+            templateUrl: 'views/clients/list.html'
+        }).
+        when('/clients/create', {
+            templateUrl: 'views/clients/create.html'
+        }).
+        when('/clients/:clientId/edit', {
+            templateUrl: 'views/clients/edit.html'
+        }).
+        when('/clients/:clientId', {
+            templateUrl: 'views/clients/view.html'
         }).
         when('/', {
             templateUrl: 'views/index.html'
