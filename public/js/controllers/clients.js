@@ -3,7 +3,12 @@ angular.module('mean.clients').controller('ClientsController',['$scope', '$route
     
     $scope.creat = function(){
         var client = new Client({
-            
+            name: this.name,
+            lastName: this.lastName,
+            doc: this.doc,
+            address: this.address,
+            phone: this.phone,
+            email: this.email
         });
         
         client.$save(function(response){
@@ -13,6 +18,11 @@ angular.module('mean.clients').controller('ClientsController',['$scope', '$route
         
         //limpiar los campos
         this.name="";
+        this.lastName="";
+        this.doc="";
+        this.address="";
+        this.phone="";
+        this.email="";
     };
     
     $scope.remove = function(client){
