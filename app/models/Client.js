@@ -16,7 +16,8 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		{
             associate: function(models) {
-				Client.hasMany(models.Factura);
+				Client.belongsTo(models.User);
+                Client.hasMany(models.Factura);
 			}
 		}
 	);

@@ -1,0 +1,45 @@
+<section data-ng-controller="ClientsController">
+	<form class="form-horizontal" data-ng-submit="create()">
+		<div class="control-group">
+			<label class="control-label" for="name">Nombre</label>
+			<div class="controls">
+				<input type="text" data-ng-model="name" id="name" placeholder="Nombre" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="lastName">Apellido</label>
+			<div class="controls">
+				<input type="text" data-ng-model="lastName" id="lastName" placeholder="Apellido" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="doc">D.N.I</label>
+			<div class="controls">
+				<input type="text" data-ng-model="doc" id="doc" placeholder="Documento identidad" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="address">Domicilio</label>
+			<div class="controls">
+				<input type="text" data-ng-model="address" id="address" placeholder="Domicilio" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="phone">Telefono</label>
+			<div class="controls">
+				<input type="text" data-ng-model="phone" id="phone" placeholder="numero telefonico" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<div class="controls">
+				<input type="text" data-ng-model="email" id="email" placeholder="Correo electronico" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

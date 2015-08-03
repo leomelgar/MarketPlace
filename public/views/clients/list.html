@@ -1,0 +1,11 @@
+<section data-ng-controller="ClientsController" data-ng-init="find()">
+	<ul class="clients unstyled">
+		<li data-ng-repeat="client in clients">
+			<span>{{client.updatedAt | date:'medium'}}</span> /
+			<span>{{client.user.name}}</span>
+			<h2><a data-ng-href="#!/clients/{{client.id}}">{{client.title}}</a></h2>
+			<div>{{client.content}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!clients || clients.length">No existen clientes aun. <br> Desea agregar alguno <a href="/#!/clients/create">Crear cliente</a>?</h1>
+</section>
