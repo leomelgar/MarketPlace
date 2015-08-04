@@ -1,7 +1,7 @@
-angular.module('mean.clients').controller('ClientsController',['$scope', '$routeParams', '$location', 'Global', 'Client', function($scope, $routeParams, $location, Global, Client){
+angular.module('mean.clients').controller('ClientsController',['$scope', '$routeParams', '$location', 'Global', 'Clients', function($scope, $routeParams, $location, Global, Client){
     $scope.global = Global;
     
-    $scope.creat = function(){
+    $scope.create = function(){
         var client = new Client({
             name: this.name,
             lastName: this.lastName,

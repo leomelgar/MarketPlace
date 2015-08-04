@@ -55,7 +55,7 @@ exports.init = function(app, passport, auth) {
         failureRedirect: '/signin'
     }), users.authCallback);
 
-    // Finish with setting up the userId param
+    // Finish with setting up the userId paramUser
     app.param('userId', users.user);
 
     // Article Routes
