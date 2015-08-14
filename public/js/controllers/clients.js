@@ -1,6 +1,9 @@
 angular.module('mean.clients').controller('ClientsController',['$scope', '$routeParams', '$location', 'Global', 'Clients', function($scope, $routeParams, $location, Global, Client){
     $scope.global = Global;
     
+    //activa el menu lateral c/opciones de clientes
+    $scope.leftPanel = "article";
+    
     $scope.create = function(){
         var client = new Client({
             name: this.name,
