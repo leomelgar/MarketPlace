@@ -1,13 +1,16 @@
-<section data-ng-controller="ClientsController" data-ng-init="find()">
-	<ul class="clients unstyled">
-		<li data-ng-repeat="client in clients">
-		    <span>{{client.name}}</span>
-		    <span>{{client.lastName}}</span>
-			<span>{{client.updatedAt | date:'medium'}}</span> / create by
-			<span>{{client.UserId}}</span>
-			<h2><a data-ng-href="#!/clients/{{client.id}}">{{client.name}}</a></h2>
-			<div>{{client.address}}</div>
-		</li>
-	</ul>
-	<h1 data-ng-hide="!clients || clients.length">No existen clientes aun. <br> Desea agregar alguno <a href="/#!/clients/create">Crear cliente</a>?</h1>
-</section>
+<div ng-include="'views/leftPanel.html'"></div>
+<div class="col-xs-12 col-sm-6 col-md-8">
+    <section data-ng-controller="ClientsController" data-ng-init="find()">
+        <ul class="clients unstyled">
+            <li data-ng-repeat="client in clients">
+                <span>{{client.name}}</span>
+                <span>{{client.lastName}}</span>
+                <span>{{client.updatedAt | date:'medium'}}</span> / create by
+                <span>{{client.UserId}}</span>
+                <h2><a data-ng-href="#!/clients/{{client.id}}">{{client.name}}</a></h2>
+                <div>{{client.address}}</div>
+            </li>
+        </ul>
+        <h1 data-ng-hide="!clients || clients.length">No existen clientes aun. <br> Desea agregar alguno <a href="/#!/clients/create">Crear cliente</a>?</h1>
+    </section>
+</div>
