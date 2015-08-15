@@ -1,8 +1,8 @@
-angular.module('mean.articles').controller('ArticlesController', ['$scope', '$routeParams', '$location', 'Global', 'Articles', function ($scope, $routeParams, $location, Global, Articles) {
+angular.module('mean.articles').controller('ArticlesController', ['$scope', '$routeParams', '$location', '$rootScope', 'Global', 'Articles', function ($scope, $routeParams, $location, $rootScope, Global, Articles) {
     $scope.global = Global;
     
     //activa el menu lateral c/opciones de articulos
-    $scope.leftPanel = "article";
+    $rootScope.leftPanel = "article";
     
     $scope.create = function() {
         var article = new Articles({

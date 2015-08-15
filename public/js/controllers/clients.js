@@ -1,4 +1,4 @@
-angular.module('mean.clients').controller('ClientsController',['$scope', '$routeParams', '$location', 'Global', 'Clients', function($scope, $routeParams, $location, Global, Client){
+angular.module('mean.clients').controller('ClientsController',['$scope', '$routeParams', '$location', '$rootScope', 'Global', 'Clients', function($scope, $routeParams, $location, $rootScope, Global, Client){
     $scope.global = Global;
     
     //activa el menu lateral c/opciones de clientes

@@ -26,7 +26,4 @@ angular.module('mean.system').controller('LeftPanel', ['$scope', 'Global', funct
                 "link": "/"
             }];
     }
-    
-    
-    $scope.isCollapsed = false;
 }]);

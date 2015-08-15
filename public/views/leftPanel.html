@@ -1,8 +1,8 @@
 <div class="col-xs-6 col-md-4 sidebar" data-ng-controller="LeftPanel">
      <span>Menu</span>
      <ul class="nav nav-sidebar">
-         <li ng-repeat="item in menuLeft">{{item.title}}
-             <a href="#!/{{item.link}}"></a>
+         <li ng-repeat="item in menuLeft">
+             <a href="#!/{{item.link}}"><span class="active sr-only">{{item.title}}</span></a>
          </li>
      </ul>
 <!--
