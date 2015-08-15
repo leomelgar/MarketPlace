@@ -2,7 +2,8 @@
      <span>Menu</span>
      <ul class="nav nav-sidebar">
          <li ng-repeat="item in menuLeft">
-             <a href="#!/{{item.link}}"><span class="active sr-only">{{item.title}}</span></a>
+<!--             <a ng-if="active" href="#!/{{item.link}}"><span class="active sr-only">{{item.title}}</span></a>-->
+             <a href="#!/{{item.link}}"><span class="{{item.icon}}"></span>{{item.title}}</a>
          </li>
      </ul>
 <!--

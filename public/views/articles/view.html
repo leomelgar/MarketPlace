@@ -1,3 +1,4 @@
+<div ng-include="'views/leftPanel.html'"></div>
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
     <span>{{article.updatedAt | date:'medium'}}</span>/
     <span>{{article.user.name}}</span>
