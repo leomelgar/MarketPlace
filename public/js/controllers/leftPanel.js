@@ -3,33 +3,35 @@ angular.module('mean.system').controller('LeftPanel', ['$scope', 'Global', funct
     
     switch($scope.leftPanel){
             case 'article':
+                $scope.titleMenu = "Menu Articulos"
                 $scope.menuLeft = [{
                 "title": "Home",
                 "link": "/",
-                "icon":"glyphicon icon-home"
+                "icon":"glyphicon glyphicon-home"
             },{
-                "title": "Articulos",
+                "title": "Listar",
                 "link": "articles",
-                "icon":"icon-th-list"
+                "icon":"glyphicon glyphicon-list"
             }, {
                 "title": "Nuevo",
                 "link": "articles/create",
-                "icon":"icon-plus"
+                "icon":"glyphicon glyphicon-plus"
             }];
             break;
             case 'client':
+                $scope.titleMenu = "Menu Clientes"
                 $scope.menuLeft = [{
                     "title": "Home",
                     "link": "/",
-                    "icon":"glyphicon icon-home"
+                    "icon":"glyphicon glyphicon-home"
                 },{
-                    "title": "Clientes",
+                    "title": "Listar",
                     "link": "clients",
-                    "icon":"icon-user"
+                    "icon":"glyphicon glyphicon-user"
                 }, {
                     "title": "Agregar",
                     "link": "clients/create",
-                    "icon":"icon-plus"
+                    "icon":"glyphicon glyphicon-plus"
                 }];
     }
 }]);

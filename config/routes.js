@@ -2,6 +2,7 @@
 var users       = require('../app/controllers/users');
 var articles    = require('../app/controllers/articles');
 var clients     = require('../app/controllers/clients');
+var products     = require('../app/controllers/products');
 var index       = require('../app/controllers/index');
 
 exports.init = function(app, passport, auth) {
@@ -83,6 +84,19 @@ exports.init = function(app, passport, auth) {
     // Finish with setting up the clientId param
     // Note: the clients.client function will be called everytime then it will call the next function. 
     app.param('clientId', clients.client);
+    
+    // Product Routes
+    app.route('/products')
+        .get(products.all)
+        .post(auth.requiresLogin, products.create);
+    app.route('/products/:productId')
+        .get(products.show)
+        .put(auth.requiresLogin, auth.product.hasAuthorization, products.update)
+        .delete(auth.requiresLogin, auth.product.hasAuthorization, products.destroy);
+
+    // Finish with setting up the productId param
+    // Note: the products.product function will be called everytime then it will call the next function. 
+    app.param('productId', products.product);
 
     
     // Home route

@@ -1,49 +1,56 @@
-<div class="navbar-inner" data-ng-controller="HeaderController">
-    <ul class="nav">
-        <li>
-            <a class="brand" href="/">Market Place</a>
-        </li>
-        
+<div class="navbar-inverse navbar-fixed-top" data-ng-controller="HeaderController">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Market Place</a>
+    </div>
+
+    <!-- navbar-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articulos<b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li data-ng-repeat="item in menuArticle" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articulos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li data-ng-repeat="item in menuArticle" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                <a href="#!/{{item.link}}">{{item.title}}</a>
+           </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li data-ng-repeat="item in menuClient" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
                     <a href="#!/{{item.link}}">{{item.title}}</a>
                 </li>
-            </ul>
+          </ul>
         </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes<b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li data-ng-repeat="item in menuClient" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-                    <a href="#!/{{item.link}}">{{item.title}}</a>
-                </li>
-            </ul>
-        </li>
-<!--
         <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
             <a href="#!/{{item.link}}">{{item.title}}</a>
         </li>
--->
-    </ul>
-    <ul class="nav pull-right" data-ng-hide="global.authenticated">
-        <li><a href="signup">Signup</a>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" data-ng-hide="global.authenticated">
+       <li><a href="signup">Registrarse</a>
         </li>
         <li class="divider-vertical"></li>
-        <li><a href="signin">Signin</a>
+        <li><a href="signin">Entrar</a>
         </li>
-    </ul>
-    <ul class="nav pull-right" data-ng-show="global.authenticated">
+      </ul>
+      <ul class="nav navbar-nav navbar-right" data-ng-show="global.authenticated">
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				{{global.user.name}} <b class="caret"></b>
-			</a>
-            <ul class="dropdown-menu">
-                <li><a href="/signout">Signout</a>
-                </li>
-            </ul>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{global.user.name}} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Perfil</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/signout">Salir</a></li>
+          </ul>
         </li>
-    </ul>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </div>

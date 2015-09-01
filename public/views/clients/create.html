@@ -1,5 +1,6 @@
 <div ng-include="'views/leftPanel.html'"></div>
-<div class="col-xs-12 col-sm-6 col-md-8">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" >
+   <spam><h3>Nuevo Cliente</h3></spam>
     <section data-ng-controller="ClientsController">
         <form class="form-horizontal" data-ng-submit="create()">
             <div class="control-group">
@@ -40,7 +41,8 @@
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <input type="submit" class="btn">
+                   <button type="submit" class="btn btn-info">Guardar</button>
+                   <button class="btn btn-default">Cancelar</button>
                 </div>
             </div>
         </form>

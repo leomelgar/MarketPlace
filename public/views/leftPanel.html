@@ -1,17 +1,8 @@
-<div class="col-xs-6 col-md-4 sidebar" data-ng-controller="LeftPanel">
-     <span>Menu</span>
+<div class="col-sm-3 col-md-2 sidebar" data-ng-controller="LeftPanel">
+     <span>{{titleMenu}}</span>
      <ul class="nav nav-sidebar">
          <li ng-repeat="item in menuLeft">
-<!--             <a ng-if="active" href="#!/{{item.link}}"><span class="active sr-only">{{item.title}}</span></a>-->
-             <a href="#!/{{item.link}}"><span class="{{item.icon}}"></span>{{item.title}}</a>
+             <a href="#!/{{item.link}}"> <span class="{{item.icon}}"></span>    {{item.title}}</a>
          </li>
      </ul>
-<!--
-     <ul class="nav nav-sidebar">
-        <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Articulos</a></li>
-        <li><a href="#">Nuevo Articulo</a></li>
-        <li><a href="#">Facturas</a></li>
-      </ul>
--->
  </div>

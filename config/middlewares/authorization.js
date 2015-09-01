@@ -43,3 +43,15 @@ exports.client = {
         next();
     }
 };
+
+/**
+ * Product authorizations routing middleware
+ */
+exports.product = {
+    hasAuthorization: function(req, res, next) {
+        if (req.product.User.id != req.user.id) {
+            return res.send(401, 'User is not authorized');
+        }
+        next();
+    }
+};
