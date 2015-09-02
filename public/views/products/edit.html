@@ -1,0 +1,53 @@
+<div ng-include="'views/leftPanel.html'"></div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" >
+   <spam><h3>Editar Informacion</h3></spam>
+<section data-ng-controller="ClientsController" data-ng-init="findOne()">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<form class="form-horizontal" data-ng-submit="update()">
+
+		<div class="control-group">
+                <label class="control-label" for="name">Nombre</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="client.name" id="name" placeholder="Nombre" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="lastName">Apellido</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="client.lastName" id="lastName" placeholder="Apellido" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="doc">D.N.I</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="client.doc" id="doc" placeholder="Documento identidad" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="address">Domicilio</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="client.address" id="address" placeholder="Domicilio" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="phone">Telefono</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="client.phone" id="phone" placeholder="numero telefonico" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="email">Email</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="client.email" id="email" placeholder="Correo electronico" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                   <button type="submit" class="btn btn-info">Guardar</button>
+                   <button class="btn btn-default">Cancelar</button>
+                </div>
+            </div>
+	</form>
+</div>
+</section>
+</div>

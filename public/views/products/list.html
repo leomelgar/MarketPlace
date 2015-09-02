@@ -1,0 +1,14 @@
+<div ng-include="'views/leftPanel.html'"></div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <section data-ng-controller="ClientsController" data-ng-init="find()">
+        <ul class="">
+            <li class="" data-ng-repeat="client in clients">
+                <span><h3><a data-ng-href="#!/clients/{{client.id}}">{{client.name}} {{client.lastName}}</a></h3></span>
+                <span>{{client.updatedAt | date:'medium'}}</span> / creado por
+                <span>{{client.UserId}}</span> 
+                <div>{{client.doc}}</div>
+            </li>
+        </ul>
+        <h1 data-ng-hide="!clients || clients.length">No existen clientes aun. <br> Desea agregar alguno <a href="/#!/clients/create">Crear cliente</a>?</h1>
+    </section>
+</div>
