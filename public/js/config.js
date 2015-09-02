@@ -34,6 +34,25 @@ angular.module('mean').config(['$routeProvider',
         otherwise({
             redirectTo: '/'
         });
+         //to products
+        when('/products', {
+            templateUrl: 'views/products/list.html'
+        }).
+        when('/products/create', {
+            templateUrl: 'views/products/create.html'
+        }).
+        when('/products/:productId/edit', {
+            templateUrl: 'views/products/edit.html'
+        }).
+        when('/products/:productId', {
+            templateUrl: 'views/products/view.html'
+        }).
+        when('/', {
+            templateUrl: 'views/index.html'
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
     }
 ]);
 
