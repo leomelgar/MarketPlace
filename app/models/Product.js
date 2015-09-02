@@ -8,7 +8,8 @@ module.exports = function(sequelize, DataTypes) {
 			name: DataTypes.STRING,
             price: DataTypes.FLOAT,
 			description: DataTypes.STRING,
-            vendor: DataTypes.STRING
+            vendor: DataTypes.STRING,
+            stock : DataTypes.INTEGER
 		},
 		{
             associate: function(models) {
