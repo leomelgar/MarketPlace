@@ -33,7 +33,7 @@ angular.module('mean').config(['$routeProvider',
         }).
         otherwise({
             redirectTo: '/'
-        });
+        }).
          //to products
         when('/products', {
             templateUrl: 'views/products/list.html'

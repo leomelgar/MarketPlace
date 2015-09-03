@@ -7,11 +7,10 @@ angular.module('mean.products').controller('ProductsController',['$scope', '$rou
     $scope.create = function(){
         var product = new Product({
             name: this.name,
-            lastName: this.lastName,
-            doc: this.doc,
-            address: this.address,
-            phone: this.phone,
-            email: this.email
+            price: this.price,
+            description: this.description,
+            vendor: this.vendor,
+            stock: this.stock
         });
         
         product.$save(function(response){
@@ -21,11 +20,10 @@ angular.module('mean.products').controller('ProductsController',['$scope', '$rou
         
         //limpiar los campos
         this.name="";
-        this.lastName="";
-        this.doc="";
-        this.address="";
-        this.phone="";
-        this.email="";
+        this.price="";
+        this.description="";
+        this.vendor="";
+        this.stock="";
     };
     
     $scope.remove = function(product){

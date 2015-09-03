@@ -33,5 +33,21 @@ angular.module('mean.system').controller('LeftPanel', ['$scope', 'Global', funct
                     "link": "clients/create",
                     "icon":"glyphicon glyphicon-plus"
                 }];
+            break;
+            case 'product':
+                $scope.titleMenu = "Menu Productos"
+                $scope.menuLeft = [{
+                    "title": "Home",
+                    "link": "/",
+                    "icon":"glyphicon glyphicon-home"
+                },{
+                    "title": "Stock",
+                    "link": "products",
+                    "icon":"glyphicon glyphicon-star"
+                }, {
+                    "title": "Agregar",
+                    "link": "products/create",
+                    "icon":"glyphicon glyphicon-plus"
+                }];
     }
 }]);
